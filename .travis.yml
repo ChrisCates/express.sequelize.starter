@@ -1,5 +1,8 @@
 language: node_js
 
+env:
+  NODE_ENV=testing
+
 node_js:
   - "6"
 

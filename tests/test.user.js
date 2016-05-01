@@ -1,4 +1,4 @@
-const config = require('../config.development.json')
+const config = require('../config.'+ (process.env.NODE_ENV || 'development') +'.json')
 const request = require('supertest')
 const base = require('../server.base.js')(config)
 const app = base.app
@@ -6,6 +6,9 @@ const app = base.app
 const randomEmail = Math.random() + '@gmail.com'
 const randomPassword = Math.random().toString()
 const grantType = 'user'
+
+
+sequelize.sync().then(() => {
 
 describe('/user API', () => {
 
@@ -89,5 +92,7 @@ describe('/user API', () => {
     })
 
   })
+
+})
 
 })

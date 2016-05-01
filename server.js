@@ -10,4 +10,8 @@ const PORT = process.env.PORT || config.port
 sequelize.sync().then(() => {
   app.listen(PORT)
   console.log('Starter pack running on PORT', PORT)
+  if (process.env.NODE_ENV == 'testing') {
+    console.log('Testing mode so exiting')
+    process.exit()
+  }
 })

@@ -7,9 +7,6 @@ const randomEmail = Math.random() + '@gmail.com'
 const randomPassword = Math.random().toString()
 const grantType = 'user'
 
-
-sequelize.sync().then(() => {
-
 describe('/user API', () => {
 
   describe('POST /user/register', () => {
@@ -92,7 +89,5 @@ describe('/user API', () => {
     })
 
   })
-
-})
 
 })

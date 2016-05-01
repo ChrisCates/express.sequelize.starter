@@ -3,6 +3,7 @@
   "redis": {},
   "mysql": {
     "host" : "localhost",
+    "user" : "root",
     "database" : "starter",
     "_socket" : "/var/run/mysqld/mysqld.sock"
   },
